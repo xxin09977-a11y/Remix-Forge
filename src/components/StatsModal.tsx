@@ -134,7 +134,7 @@ export function StatsModal({ data, reactiveStreak, onClose, onToggleDate, onUpda
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[100] bg-bg/95 flex flex-col pt-12 overflow-hidden transition-colors duration-500 backdrop-blur-sm"
+      className="fixed inset-0 z-[100] bg-bg/95 flex flex-col pt-[calc(3rem+env(safe-area-inset-top))] overflow-hidden transition-colors duration-500 backdrop-blur-sm"
     >
       <div className="px-6 flex justify-between items-center mb-8 flex-shrink-0">
         <h2 className="text-xl font-black tracking-widest text-accent uppercase accent-glow">STATS & LOGS</h2>

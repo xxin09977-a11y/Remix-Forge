@@ -69,7 +69,7 @@ function AppContent() {
   }, [activeTab, exitCount]);
 
   return (
-    <div className="fixed inset-0 bg-bg text-text overflow-hidden flex flex-col font-sans max-w-md mx-auto border-x border-border shadow-2xl transition-colors duration-500">
+    <div className="fixed inset-0 h-[100dvh] bg-bg text-text overflow-hidden flex flex-col pt-[env(safe-area-inset-top)] font-sans max-w-md mx-auto border-x border-border shadow-2xl transition-colors duration-500">
       {/* Toast Alert */}
       <AnimatePresence>
         {showToast && (

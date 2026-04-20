@@ -49,7 +49,7 @@ export function UrgeRelief({ onClose }: UrgeReliefProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[100] bg-bg flex flex-col pt-12 transition-colors duration-500"
+      className="fixed inset-0 z-[100] bg-bg flex flex-col pt-[calc(3rem+env(safe-area-inset-top))] transition-colors duration-500"
     >
       <div className="px-6 flex justify-between items-center mb-8">
         <h2 className="text-xl font-black tracking-widest text-accent uppercase accent-glow">{T.URGE_HELP[language]}</h2>

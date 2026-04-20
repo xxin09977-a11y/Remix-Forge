@@ -19,7 +19,7 @@ export function Navigation({ activeTab, setActiveTab }: NavigationProps) {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 h-20 bg-bg/80 backdrop-blur-md border-t border-border flex items-center justify-around px-6 pb-2 z-50 transition-colors duration-500">
+    <nav className="fixed bottom-0 left-0 right-0 h-[calc(5rem+env(safe-area-inset-bottom))] bg-bg/80 backdrop-blur-md border-t border-border flex items-center justify-around px-6 pb-[env(safe-area-inset-bottom)] z-50 transition-colors duration-500">
       {tabs.map(({ id, icon: Icon, label }) => {
         const isActive = activeTab === id;
         return (
