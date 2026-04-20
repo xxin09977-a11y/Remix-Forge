@@ -19,7 +19,8 @@ export function Navigation({ activeTab, setActiveTab }: NavigationProps) {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 h-[calc(5rem+env(safe-area-inset-bottom))] bg-bg/80 backdrop-blur-md border-t border-border flex items-center justify-around px-6 pb-[env(safe-area-inset-bottom)] z-50 transition-colors duration-500">
+    <div className="w-full flex justify-center pb-[env(safe-area-inset-bottom)] flex-shrink-0">
+      <nav className="w-full max-w-md h-20 bg-bg border-t border-border flex items-center justify-around px-6 transition-colors duration-500">
       {tabs.map(({ id, icon: Icon, label }) => {
         const isActive = activeTab === id;
         return (
@@ -53,6 +54,7 @@ export function Navigation({ activeTab, setActiveTab }: NavigationProps) {
           </button>
         );
       })}
-    </nav>
+      </nav>
+    </div>
   );
 }

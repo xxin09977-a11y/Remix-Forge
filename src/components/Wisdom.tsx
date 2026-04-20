@@ -31,7 +31,7 @@ export function WisdomView({ data, reactiveStreak }: WisdomProps) {
   const currentBenefits = BENEFITS[language];
 
   return (
-    <div className="flex flex-col h-full pt-16 pb-24 text-center overflow-y-auto no-scrollbar bg-bg text-text">
+    <div className="flex flex-col h-full pt-16 pb-12 text-center overflow-y-auto no-scrollbar bg-bg text-text">
       <div className="px-6">
         <div className="mb-10 flex justify-center">
           <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center border border-accent/20 accent-border-glow">

@@ -49,9 +49,9 @@ export function HomeView({ data, reactiveStreak, onCheckIn, onUrgeHelp, onToggle
   };
 
   return (
-    <div className="flex flex-col h-full px-6 pt-6 pb-20 overflow-y-auto no-scrollbar bg-bg text-text">
+    <div className="flex flex-col h-full px-4 pt-4 pb-6 bg-bg text-text overflow-hidden">
       {/* Header */}
-      <div className="flex justify-between items-center mb-6 mt-4">
+      <div className="flex justify-between items-center mb-2 mt-2 px-2 flex-shrink-0">
         <h1 className="text-xl font-black tracking-[0.2em] text-text uppercase leading-none accent-glow">FORGE</h1>
         <button 
           onClick={() => {
@@ -67,8 +67,8 @@ export function HomeView({ data, reactiveStreak, onCheckIn, onUrgeHelp, onToggle
         </button>
       </div>
 
-      {/* Calendar - Larger and more prominent */}
-      <div className="mt-8 mb-4 flex-shrink-0 relative flex justify-center">
+      {/* Calendar - HERO SECTION */}
+      <div className="flex-1 flex items-center justify-center p-2 relative">
         <Calendar 
           startDate={data.startDate}
           history={data.history} 
@@ -78,7 +78,7 @@ export function HomeView({ data, reactiveStreak, onCheckIn, onUrgeHelp, onToggle
       </div>
 
       {/* Action Buttons Area */}
-      <div className="flex flex-col space-y-1.5">
+      <div className="flex flex-col space-y-2 mt-4 px-2 flex-shrink-0">
         <motion.button
           whileTap={{ scale: 0.95 }}
           onClick={handleAction}

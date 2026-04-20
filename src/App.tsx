@@ -46,31 +46,40 @@ function AppContent() {
 
       if (activeTab !== 'home') {
         setActiveTab('home');
-        window.history.pushState(null, '', null);
+        // Restore the buffer so next back button works
+        window.history.pushState({ app: 'forge' }, '', null);
       } else {
         if (exitCount === 0) {
           setExitCount(1);
           setShowToast(true);
-          window.history.pushState(null, '', null);
+          // Restore the buffer
+          window.history.pushState({ app: 'forge' }, '', null);
           setTimeout(() => {
             setExitCount(0);
             setShowToast(false);
           }, 2000);
         } else {
-          // We allow the back navigation to proceed if tapped again
-          // No pushState call here
+          // Allow exit: do not pushState. 
+          // The browser is now at the entry BEFORE the app started.
+          // Tapping back again (or this very popstate if not careful) will exit.
+          window.history.back(); 
         }
       }
     };
 
-    window.history.pushState(null, '', null);
+    // Initial buffer
+    if (!window.history.state || window.history.state.app !== 'forge') {
+      window.history.pushState({ app: 'forge' }, '', null);
+    }
+    
     window.addEventListener('popstate', handleBack);
     return () => window.removeEventListener('popstate', handleBack);
   }, [activeTab, exitCount]);
 
   return (
-    <div className="fixed inset-0 h-[100dvh] bg-bg text-text overflow-hidden flex flex-col pt-[env(safe-area-inset-top)] font-sans max-w-md mx-auto border-x border-border shadow-2xl transition-colors duration-500">
-      {/* Toast Alert */}
+    <div className="fixed inset-0 h-[100dvh] bg-bg flex flex-col items-center justify-center transition-colors duration-500">
+      <div className="relative w-full max-w-md h-full bg-bg text-text shadow-2xl flex flex-col border-x border-border overflow-hidden pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]">
+        {/* Toast Alert */}
       <AnimatePresence>
         {showToast && (
           <motion.div
@@ -142,6 +151,7 @@ function AppContent() {
       </main>
 
       <Navigation activeTab={activeTab} setActiveTab={setActiveTab} />
+      </div>
     </div>
   );
 }

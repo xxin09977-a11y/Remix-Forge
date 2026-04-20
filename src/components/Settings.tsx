@@ -40,7 +40,7 @@ export function SettingsView({ data, onReset, onUpdateStart }: SettingsProps) {
   };
 
   return (
-    <div className="flex flex-col h-full px-6 pt-16 pb-24 space-y-8 overflow-y-auto no-scrollbar bg-bg text-text">
+    <div className="flex flex-col h-full px-6 pt-16 pb-12 space-y-8 overflow-y-auto no-scrollbar bg-bg text-text">
       <h2 className="text-xl font-black tracking-[0.2em] uppercase text-text mb-2">{T.SETTINGS[language]}</h2>
 
       {/* Theme Presets - Horizontal Scrollable Row */}

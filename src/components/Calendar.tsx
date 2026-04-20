@@ -36,9 +36,9 @@ export function Calendar({ startDate, history, onToggleDate, onLongPressDate }: 
         </h3>
       </div>
 
-      <div className="grid grid-cols-7 gap-y-0.5 text-center justify-items-center">
+      <div className="grid grid-cols-7 gap-y-2 text-center justify-items-center w-full">
         {weekDays.map((d, i) => (
-          <div key={`${d}-${i}`} className="text-[9px] text-subtext font-black w-full text-center">
+          <div key={`${d}-${i}`} className="text-[10px] text-subtext font-black w-full text-center pb-2">
             {d}
           </div>
         ))}
@@ -74,24 +74,24 @@ export function Calendar({ startDate, history, onToggleDate, onLongPressDate }: 
               }}
               onMouseEnter={() => note && setHoveredNote(note)}
               onMouseLeave={() => setHoveredNote(null)}
-              className={`flex flex-col items-center justify-center relative py-0.5 transition-all duration-300 ${
+              className={`flex flex-col items-center justify-center relative py-1 transition-all duration-300 w-full ${
                 isDisabled ? (isBeforeStart ? 'opacity-20 cursor-default' : 'opacity-40 cursor-default') : 'cursor-pointer'
               }`}
             >
               <div 
-                className={`w-9 h-9 flex items-center justify-center rounded-full transition-all duration-300 relative overflow-hidden ${
-                  isT ? 'border border-accent accent-border-glow' : ''
+                className={`w-11 h-11 flex items-center justify-center rounded-full transition-all duration-300 relative overflow-hidden ${
+                  isT ? 'border-2 border-accent accent-border-glow' : ''
                 }`}
               >
                 {/* Background overlay for state */}
                 {(status === 'clean' || status === 'done') && (
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/30 to-green-900/10" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/40 to-green-900/20" />
                 )}
                 {status === 'relapse' && (
-                  <div className="absolute inset-0 bg-gradient-to-br from-red-500/30 to-red-900/10" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-red-500/40 to-red-900/20" />
                 )}
                 
-                <span className={`text-[18px] font-bold z-10 ${
+                <span className={`text-[20px] font-black z-10 ${
                   isT ? 'text-accent accent-glow' : 'text-text'
                 }`}>
                   {format(day, 'd')}
@@ -99,8 +99,8 @@ export function Calendar({ startDate, history, onToggleDate, onLongPressDate }: 
                 
                 {/* Note Indicator */}
                 {note && (
-                  <div className="absolute top-0.5 right-0.5 z-20">
-                    <StickyNote size={8} className="text-accent accent-glow" />
+                  <div className="absolute top-1 right-1 z-20">
+                    <StickyNote size={10} className="text-accent accent-glow" />
                   </div>
                 )}
               </div>
