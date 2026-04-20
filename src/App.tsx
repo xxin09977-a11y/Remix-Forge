@@ -39,30 +39,34 @@ function AppContent() {
 
   // Handle mobile back button
   useEffect(() => {
-    const handleBack = (e: PopStateEvent) => {
+    const handleBack = () => {
       if ((window as any).__modalActiveCount > 0) {
-        return; // Let the active modal component handle its own stack
+        return; // Modal handles its own back button
       }
 
       if (activeTab !== 'home') {
-        e.preventDefault();
         setActiveTab('home');
         window.history.pushState(null, '', null);
       } else {
-        // Simple double back logic for demo
-        setExitCount(prev => prev + 1);
-        setShowToast(true);
-        setTimeout(() => {
-          setExitCount(0);
-          setShowToast(false);
-        }, 2000);
+        if (exitCount === 0) {
+          setExitCount(1);
+          setShowToast(true);
+          window.history.pushState(null, '', null);
+          setTimeout(() => {
+            setExitCount(0);
+            setShowToast(false);
+          }, 2000);
+        } else {
+          // We allow the back navigation to proceed if tapped again
+          // No pushState call here
+        }
       }
     };
 
     window.history.pushState(null, '', null);
     window.addEventListener('popstate', handleBack);
     return () => window.removeEventListener('popstate', handleBack);
-  }, [activeTab]);
+  }, [activeTab, exitCount]);
 
   return (
     <div className="fixed inset-0 bg-bg text-text overflow-hidden flex flex-col font-sans max-w-md mx-auto border-x border-border shadow-2xl transition-colors duration-500">

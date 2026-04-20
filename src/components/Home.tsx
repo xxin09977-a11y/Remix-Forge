@@ -68,7 +68,7 @@ export function HomeView({ data, reactiveStreak, onCheckIn, onUrgeHelp, onToggle
       </div>
 
       {/* Calendar - Larger and more prominent */}
-      <div className="mt-8 mb-4 flex-shrink-0 relative">
+      <div className="mt-8 mb-4 flex-shrink-0 relative flex justify-center">
         <Calendar 
           startDate={data.startDate}
           history={data.history} 

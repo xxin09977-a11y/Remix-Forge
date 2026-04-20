@@ -36,9 +36,9 @@ export function Calendar({ startDate, history, onToggleDate, onLongPressDate }: 
         </h3>
       </div>
 
-      <div className="grid grid-cols-7 gap-y-0.5 text-center">
+      <div className="grid grid-cols-7 gap-y-0.5 text-center justify-items-center">
         {weekDays.map((d, i) => (
-          <div key={`${d}-${i}`} className="text-[9px] text-subtext font-black">
+          <div key={`${d}-${i}`} className="text-[9px] text-subtext font-black w-full text-center">
             {d}
           </div>
         ))}
