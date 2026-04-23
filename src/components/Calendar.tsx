@@ -36,9 +36,9 @@ export function Calendar({ startDate, history, onToggleDate, onLongPressDate }: 
         </h3>
       </div>
 
-      <div className="grid grid-cols-7 gap-y-2 text-center justify-items-center w-full">
+      <div className="grid grid-cols-7 gap-y-1 md:gap-y-2 text-center justify-items-center w-full max-w-[340px] mx-auto">
         {weekDays.map((d, i) => (
-          <div key={`${d}-${i}`} className="text-[10px] text-subtext font-black w-full text-center pb-2">
+          <div key={`${d}-${i}`} className="text-[10px] text-subtext font-black w-full text-center pb-1">
             {d}
           </div>
         ))}
@@ -79,8 +79,8 @@ export function Calendar({ startDate, history, onToggleDate, onLongPressDate }: 
               }`}
             >
               <div 
-                className={`w-11 h-11 flex items-center justify-center rounded-full transition-all duration-300 relative overflow-hidden ${
-                  isT ? 'border-2 border-accent accent-border-glow' : ''
+                className={`w-[clamp(2.5rem,10vw,3rem)] aspect-square flex items-center justify-center rounded-full transition-all duration-300 relative overflow-hidden ${
+                  isT ? 'border-[1.5px] border-accent accent-border-glow' : ''
                 }`}
               >
                 {/* Background overlay for state */}
@@ -91,7 +91,7 @@ export function Calendar({ startDate, history, onToggleDate, onLongPressDate }: 
                   <div className="absolute inset-0 bg-gradient-to-br from-red-500/40 to-red-900/20" />
                 )}
                 
-                <span className={`text-[20px] font-black z-10 ${
+                <span className={`text-[clamp(14px,5vw,18px)] font-black z-10 ${
                   isT ? 'text-accent accent-glow' : 'text-text'
                 }`}>
                   {format(day, 'd')}

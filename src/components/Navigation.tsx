@@ -19,7 +19,7 @@ export function Navigation({ activeTab, setActiveTab }: NavigationProps) {
   ];
 
   return (
-    <div className="w-full flex justify-center pb-[env(safe-area-inset-bottom)] flex-shrink-0">
+    <div className="w-full flex justify-center flex-shrink-0">
       <nav className="w-full max-w-md h-20 bg-bg border-t border-border flex items-center justify-around px-6 transition-colors duration-500">
       {tabs.map(({ id, icon: Icon, label }) => {
         const isActive = activeTab === id;

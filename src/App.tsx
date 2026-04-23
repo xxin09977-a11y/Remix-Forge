@@ -31,50 +31,90 @@ export default function App() {
 function AppContent() {
   const { language } = useLanguage();
   const { theme } = useTheme();
-  const [activeTab, setActiveTab] = useState<Tab>('home');
+  
+  // Initialize tab from URL hash if available, otherwise 'home'
+  const initialHash = window.location.hash.replace('#', '') as Tab;
+  const [activeTab, setActiveTabState] = useState<Tab>(['home', 'wisdom', 'settings'].includes(initialHash) ? initialHash : 'home');
+  
   const { data, checkIn, resetStreak, updateStartDate, toggleDateStatus, setDateEmpty, setDayNote, reactiveStreak } = useStreak();
   const [exitCount, setExitCount] = useState(0);
   const [showToast, setShowToast] = useState(false);
   const [showUrgeHelp, setShowUrgeHelp] = useState(false);
 
-  // Handle mobile back button
+  // Sync state to URL hash changes (like hardware back button)
   useEffect(() => {
-    const handleBack = () => {
+    const handleHashChange = () => {
       if ((window as any).__modalActiveCount > 0) {
-        return; // Modal handles its own back button
+        // Modals use pushState(null), not hashes, so hashchange isn't for them
+        // But if hash changes while modal is open, we should still sync the tab underneath.
       }
+      
+      const newHash = window.location.hash.replace('#', '') || 'home';
+      if (['home', 'wisdom', 'settings'].includes(newHash)) {
+        setActiveTabState(newHash as Tab);
+      }
+    };
 
-      if (activeTab !== 'home') {
-        setActiveTab('home');
-        // Restore the buffer so next back button works
-        window.history.pushState({ app: 'forge' }, '', null);
-      } else {
-        if (exitCount === 0) {
-          setExitCount(1);
-          setShowToast(true);
-          // Restore the buffer
-          window.history.pushState({ app: 'forge' }, '', null);
-          setTimeout(() => {
-            setExitCount(0);
-            setShowToast(false);
-          }, 2000);
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  // Handle Double-Back to Exit on Home
+  useEffect(() => {
+    const handlePopState = (e: PopStateEvent) => {
+      if ((window as any).__modalActiveCount > 0) return; // Ignore if modal is open
+
+      const currentHash = window.location.hash.replace('#', '') || 'home';
+      
+      // If we popped to 'home', we trap the immediate next back action for the exit feature.
+      if (currentHash === 'home') {
+        if (!e.state || e.state.app !== 'forge_exit_trap') {
+           // We reached home, but need a trap state
+           window.history.pushState({ app: 'forge_exit_trap' }, '', window.location.pathname + window.location.hash);
         } else {
-          // Allow exit: do not pushState. 
-          // The browser is now at the entry BEFORE the app started.
-          // Tapping back again (or this very popstate if not careful) will exit.
-          window.history.back(); 
+           if (exitCount === 0) {
+             setExitCount(1);
+             setShowToast(true);
+             window.history.pushState({ app: 'forge_exit_trap' }, '', window.location.pathname + window.location.hash);
+             setTimeout(() => {
+               setExitCount(0);
+               setShowToast(false);
+             }, 2000);
+           } else {
+             window.history.go(-2); // exit
+           }
         }
       }
     };
 
-    // Initial buffer
-    if (!window.history.state || window.history.state.app !== 'forge') {
-      window.history.pushState({ app: 'forge' }, '', null);
+    // Ensure we start with a trap state on home load
+    if (activeTab === 'home' && (!window.history.state || window.history.state.app !== 'forge_exit_trap')) {
+       window.history.replaceState({ app: 'forge_exit_trap' }, '', window.location.pathname + window.location.hash);
     }
-    
-    window.addEventListener('popstate', handleBack);
-    return () => window.removeEventListener('popstate', handleBack);
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
   }, [activeTab, exitCount]);
+
+  // Wrapper for manual tab click navigation
+  const setActiveTab = (tab: Tab) => {
+    if (tab === activeTab) return;
+    
+    // Change hash to push a natural history state!
+    if (tab === 'home') {
+       // Going back home replaces or pushes hash empty
+       window.history.pushState({ app: 'forge_exit_trap' }, '', window.location.pathname);
+       setActiveTabState('home');
+    } else {
+       // Replacing state for non-home prevents deep stacks (Settings -> Wisdom -> Settings -> Wisdom)
+       if (activeTab === 'home') {
+         window.location.hash = tab;
+       } else {
+         window.history.replaceState(null, '', `#${tab}`);
+         setActiveTabState(tab);
+       }
+    }
+  };
 
   return (
     <div className="fixed inset-0 h-[100dvh] bg-bg flex flex-col items-center justify-center transition-colors duration-500">

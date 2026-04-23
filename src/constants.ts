@@ -64,99 +64,43 @@ export const BENEFITS: { en: BenefitStage[]; mm: BenefitStage[] } = {
 
 export const QUOTES: Quote[] = [
   {
-    text: { en: "Discipline is choosing between what you want now and what you want most.", mm: "စည်းကမ်းရှိခြင်းဆိုသည်မှာ ယခုသင်အလိုရှိသောအရာနှင့် သင်အလိုအပ်ဆုံးအရာတို့အကြား ရွေးချယ်ခြင်းဖြစ်သည်။" },
-    author: "Abraham Lincoln"
+    text: { en: "Semen retention and lust control are not about suppression; they are about transmuting your most potent biological energy into drive, creativity, and success.", mm: "ကာမစိတ်ကို ထိန်းချုပ်ခြင်းဆိုသည်မှာ ဖိနှိပ်ထားခြင်းမဟုတ်ဘဲ၊ သင့်ခန္ဓာကိုယ်၏ အပြင်းထန်ဆုံးသော ဇီဝစွမ်းအင်များကို ကိုယ်ပိုင်ရည်မှန်းချက်၊ တီထွင်ဖန်တီးမှုနှင့် အောင်မြင်မှုများအဖြစ်သို့ ပြောင်းလဲပစ်ခြင်းဖြစ်သည်။" },
+    author: "The Alchemy of Energy"
   },
   {
-    text: { en: "He who conquers others is strong; he who conquers himself is mighty.", mm: "အခြားသူများကို အနိုင်ရသူသည် သန်မာသော်လည်း မိမိကိုယ်ကို အနိုင်ရသူသည်သာ ခွန်အားအကြီးဆုံးဖြစ်သည်။" },
-    author: "Lao Tzu"
+    text: { en: "Excessive sexual indulgence burns out your dopamine receptors, leaving you unmotivated and empty. Mastering your lust restores your drive for real accomplishments.", mm: "ကာမဂုဏ်ခံစားမှုများကို အလွန်အကျွံ လိုက်စားခြင်းသည် သင့်ဦးနှောက်ရှိ ဒိုပါမင်းစနစ်ကို ပျက်စီးစေပြီး စိတ်အားငယ်မှုနှင့် ဟာလာဟင်းလင်းဖြစ်မှုကိုသာ ကျန်ရစ်စေသည်။ ကာမစိတ်ကို စိုးမိုးနိုင်မှသာ စစ်မှန်သောအောင်မြင်မှုများအတွက် တွန်းအားကို ပြန်လည်ရရှိမည်ဖြစ်သည်။" },
+    author: "Neurological Reset"
   },
   {
-    text: { en: "The first and greatest victory is to conquer yourself.", mm: "ပထမဆုံးနှင့် အကြီးမြတ်ဆုံးသော အောင်ပွဲမှာ မိမိကိုယ်ကို အနိုင်ယူခြင်းဖြစ်သည်။" },
-    author: "Plato"
+    text: { en: "When you retain your life force and conquer lust, your body language, eye contact, and vocal resonance naturally project an undeniable, magnetic dominance.", mm: "သင်၏ ဘဝစွမ်းအင်များကို မဖြုန်းတီးဘဲ ကာမစိတ်ကို အနိုင်ယူနိုင်သောအခါ၊ သင့်ကိုယ်ဟန်အမူအရာ၊ မျက်လုံးချင်းဆုံမှုနှင့် အသံဩဇာတို့သည် လူအများကြားတွင် သဘာဝကျကျ ဩဇာတိက္ကမ ကြီးမားလာမည်ဖြစ်သည်။" },
+    author: "Magnetic Presence"
   },
   {
-    text: { en: "Waste no more time arguing what a good man should be. Be one.", mm: "လူကောင်းတစ်ယောက် ဘယ်လိုဖြစ်သင့်သလဲဆိုတာကို ငြင်းခုံပြီး အချိန်မဖြုန်းပါနဲ့။ ကိုယ်တိုင်သာ လူကောင်းတစ်ယောက် ဖြစ်အောင်လုပ်ပါ။" },
-    author: "Marcus Aurelius"
+    text: { en: "A man who cannot control his sexual impulses can be easily manipulated by anyone and anything. Lust is the chain that binds a weak mind.", mm: "မိမိ၏ လိင်မှုဆိုင်ရာ စေ့ဆော်မှုများကို မထိန်းချုပ်နိုင်သူအား မည်သူမဆို အလွယ်တကူ ခြယ်လှယ်နိုင်သည်။ ကာမတပ်မက်ခြင်းသည် အားနည်းသောစိတ်ကို ချည်နှောင်ထားသည့် သံကြိုးပင်ဖြစ်သည်။" },
+    author: "Mastery of Self"
   },
   {
-    text: { en: "Suffering is the true test of life.", mm: "ဆင်းရဲဒုက္ခခံရခြင်းသည် ဘဝ၏ စစ်မှန်သော စမ်းသပ်မှုဖြစ်သည်။" },
-    author: "David Goggins"
+    text: { en: "Why control your urges? Because living without the constant fog of lust gives you a razor-sharp mind and an unfair advantage in a highly distracted world.", mm: "ကာမစိတ်ကို ဘာကြောင့် ထိန်းချုပ်သင့်သလဲ။ အကြောင်းမှာ ကာမတိမ်တိုက်များ ကင်းစင်သွားသောအခါ အလွန်ထက်မြက်သည့် အသိဉာဏ်ကို ရရှိပြီး၊ လှည့်စားမှုများသော ဤကမ္ဘာကြီးတွင် သင့်အား များစွာ အသာစီးရစေသောကြောင့် ဖြစ်သည်။" },
+    author: "The Edge"
   },
   {
-    text: { en: "The man who moves a mountain begins by carrying away small stones.", mm: "တောင်တစ်တောင်ကို ရွှေ့မည့်သူသည် ကျောက်ခဲလေးများကို စတင်သယ်ဆောင်ခြင်းမှ စတင်ရသည်။" },
-    author: "Confucius"
+    text: { en: "Lust is a fire that can never be satisfied by feeding it. True peace and unshakable confidence only come when you decide to starve the fire.", mm: "ကာမစိတ်ဆိုသည်မှာ ထင်းထည့်ပေးရုံဖြင့် မည်သည့်အခါမျှ ငြိမ်းမသွားနိုင်သော မီးတောက်ဖြစ်သည်။ ထိုမီးတောက်ကို ငတ်မွတ်အောင်ထားဖို့ ဆုံးဖြတ်လိုက်သည့်အခါမှသာ စစ်မှန်သောအေးချမ်းမှုနှင့် တုန်လှုပ်ခြင်းမရှိသော ယုံကြည်မှုကို ရရှိမည်ဖြစ်သည်။" },
+    author: "Inner Peace"
   },
   {
-    text: { en: "It is not that we have a short time to live, but that we waste a lot of it.", mm: "ကျွန်ုပ်တို့တွင် အသက်ရှင်ရန် အချိန်တိုတောင်းလှသည်မဟုတ်ဘဲ ကျွန်ုပ်တို့က အချိန်များကို ဖြုန်းတီးနေကြခြင်းသာဖြစ်သည်။" },
-    author: "Seneca"
+    text: { en: "Your sexual energy is the force of creation. You can either use it to create the life of your dreams, or waste it endlessly on temporary pixels and empty fantasies.", mm: "သင့်၏ လိင်ပိုင်းဆိုင်ရာစွမ်းအင်သည် ဖန်တီးနိုင်စွမ်း၏ အရင်းအမြစ်ဖြစ်သည်။ ၎င်းကို အသုံးပြု၍ သင်အိပ်မက်မက်သော ဘဝကို တည်ဆောက်နိုင်သလို၊ တဒင်္ဂသာယာမှုနှင့် စိတ်ကူးယဉ်မှုများဖြင့် အချည်းနှီး ဖျက်ဆီးပစ်နိုင်သည်။" },
+    author: "Creative Force"
   },
   {
-    text: { en: "Don't stop when you're tired. Stop when you're done.", mm: "မောပန်းလာတဲ့အခါ မရပ်တန့်လိုက်ပါနဲ့။ အောင်မြင်ပြီးသွားတဲ့အခါမှသာ ရပ်တန့်ပါ။" },
-    author: "David Goggins"
+    text: { en: "True masculinity starts with self-restraint. By guarding your seed and rejecting cheap dopamine, you step out of a boy's mindset and forge a warrior's spirit.", mm: "စစ်မှန်သော ယောက်ျားပီသမှုသည် မိမိကိုယ်ကို ထိန်းချုပ်ခြင်းမှ စတင်သည်။ မိမိ၏စွမ်းအင်ကို စောင့်ရှောက်ကာ တန်ဖိုးနည်းသော သာယာမှုများကို ငြင်းပယ်ခြင်းဖြင့် ငယ်ရွယ်သူ၏စိတ်ဓာတ်မှ ရုန်းထွက်ကာ စစ်သည်တော်တစ်ဦး၏ စိတ်ဓာတ်ကို တည်ဆောက်နိုင်မည်ဖြစ်သည်။" },
+    author: "The Warrior Path"
   },
   {
-    text: { en: "Small disciplines repeated with consistency every day lead to great achievements.", mm: "နေ့စဉ်မှန်မှန်ပြုလုပ်သော သေးငယ်သည့် စည်းကမ်းများသည် ကြီးမားသော အောင်မြင်မှုများဆီသို့ ဦးတည်စေသည်။" },
-    author: "John Maxwell"
+    text: { en: "Lust cheapens your existence to chasing passing feelings. Focusing on your higher purpose elevates you from an animalistic drive to a life of profound meaning.", mm: "ကာမစိတ်နောက်သို့ လိုက်ခြင်းသည် သင့်ဘဝတန်ဖိုးကို ယာယီခံစားချက်များအောက်သို့ နှိမ့်ချလိုက်ခြင်းပင်ဖြစ်သည်။ မိမိ၏ မြင့်မြတ်သော ရည်မှန်းချက်များအပေါ် အာရုံစိုက်ခြင်းက တိရစ္ဆာန်ဆန်သော စေ့ဆော်မှုများမှ ကျော်လွန်ကာ အဓိပ္ပါယ်ရှိသော ဘဝတစ်ခုအဖြစ် မြှင့်တင်ပေးသည်။" },
+    author: "Purpose over Pleasure"
   },
   {
-    text: { en: "Freedom is the only worthy goal in life. It is won by disregarding things that lie beyond our control.", mm: "လွတ်လပ်မှုသည် ဘဝတွင် တစ်ခုတည်းသော တန်ဖိုးရှိသည့် ပန်းတိုင်ဖြစ်သည်။ မိမိမထိန်းချုပ်နိုင်သောအရာများကို လျစ်လျူရှုခြင်းဖြင့်သာ ၎င်းကို ရရှိနိုင်သည်။" },
-    author: "Epictetus"
-  },
-  {
-    text: { en: "You have power over your mind - not outside events. Realize this, and you will find strength.", mm: "မင်းရဲ့စိတ်ကို မင်းထိန်းချုပ်နိုင်တယ်၊ ပြင်ပဖြစ်ရပ်တွေကို မဟုတ်ဘူး။ ဒါကို သိရှိနားလည်ရင် မင်း ခွန်အားကို တွေ့လိမ့်မယ်။" },
-    author: "Marcus Aurelius"
-  },
-  {
-    text: { en: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.", mm: "ကျွန်ုပ်တို့သည် အဖန်တလဲလဲ ပြုလုပ်သောအရာများအတိုင်း ဖြစ်လာသည်။ ထို့ကြောင့် ထူးချွန်ခြင်းသည် လုပ်ရပ်တစ်ခုမဟုတ်ဘဲ အလေ့အကျင့်တစ်ခုသာဖြစ်သည်။" },
-    author: "Aristotle"
-  },
-  {
-    text: { en: "Hard times create strong men. Strong men create good times.", mm: "ခက်ခဲသောအချိန်များသည် သန်မာသောလူများကို ဖြစ်ပေါ်စေသည်။ သန်မာသောလူများသည် ကောင်းမွန်သောအချိန်များကို ဖန်တီးကြသည်။" },
-    author: "G. Michael Hopf"
-  },
-  {
-    text: { en: "Energy and persistence conquer all things.", mm: "စွမ်းအင်နှင့် ဇွဲလုံ့လတို့သည် အရာခပ်သိမ်းကို အောင်နိုင်စေသည်။" },
-    author: "Benjamin Franklin"
-  },
-  {
-    text: { en: "Fall seven times, stand up eight.", mm: "ခုနစ်ကြိမ်လဲရင် ရှစ်ကြိမ်မြောက် ပြန်ထပါ။" },
-    author: "Japanese Proverb"
-  },
-  {
-    text: { en: "Rule your mind or it will rule you.", mm: "မင်းရဲ့စိတ်ကို မင်းစိုးမိုးပါ၊ မဟုတ်ရင် အဲဒီစိတ်က မင်းကို ပြန်ပြီးစိုးမိုးလိမ့်မယ်။" },
-    author: "Horace"
-  },
-  {
-    text: { en: "A disciplined mind leads to happiness.", mm: "စည်းကမ်းရှိသော စိတ်သည် ပျော်ရွှင်မှုကို ဆောင်ကြဉ်းပေးသည်။" },
-    author: "Buddha"
-  },
-  {
-    text: { en: "Action is the foundational key to all success.", mm: "လက်တွေ့လုပ်ဆောင်ခြင်းသည် အောင်မြင်မှုအားလုံး၏ အခြေခံအချက်ဖြစ်သည်။" },
-    author: "Pablo Picasso"
-  },
-  {
-    text: { en: "Don't count the days, make the days count.", mm: "ရက်တွေကို မရေတွက်ပါနဲ့၊ ရက်တွေက တန်ဖိုးရှိအောင်သာ လုပ်ပါ။" },
-    author: "Muhammad Ali"
-  },
-  {
-    text: { en: "Strength does not come from physical capacity. It comes from an indomitable will.", mm: "ခွန်အားသည် ရုပ်ပိုင်းဆိုင်ရာ စွမ်းဆောင်ရည်မှ လာသည်မဟုတ်ဘဲ မဆုတ်မနစ်သော စိတ်ဓာတ်မှသာ လာခြင်းဖြစ်သည်။" },
-    author: "Mahatma Gandhi"
-  },
-  {
-    text: { en: "At 37, your 53kg frame is built for agility and endurance, not exhaustion. Channel your vital energy into absolute mental clarity instead of endless drain.", mm: "အသက် ၃၇ နှစ်အရွယ်တွင်၊ သင့်ခန္ဓာကိုယ်သည် မောပန်းနွမ်းနယ်နေရန်မဟုတ်ဘဲ သွက်လက်တက်ကြွပြီး ကြံ့ခိုင်နေရန် ဖြစ်သည်။ သင်၏ အဖိုးတန်စွမ်းအင်များကို အချည်းနှီး မဖြုန်းတီးဘဲ အသိဉာဏ် ကြည်လင်လာစေရန်အတွက်သာ အသုံးပြုပါ။" },
-    author: "Vitality Coach"
-  },
-  {
-    text: { en: "True presence isn't measured in height or weight; it's measured in absolute self-control. Retain your vital energy, stand tall, and let your iron-clad discipline fill the room.", mm: "လူတစ်ယောက်ရဲ့ ဩဇာတိက္ကမကို အရပ်အမြင့်နဲ့တိုင်းတာလို့မရပါဘူး၊ မိမိကိုယ်ကို ထိန်းချုပ်နိုင်စွမ်းနဲ့သာ တိုင်းတာနိုင်ပါတယ်။ စွမ်းအင်တွေကို ထိန်းသိမ်းပါ၊ စည်းကမ်းကြီးမားစွာနဲ့ မတ်မတ်ရပ်တည်ပါ။" },
-    author: "Discipline Coach"
-  },
-  {
-    text: { en: "Brain fog doesn't belong in your late thirties. Break the cycle, protect your dopamine, and watch your mind slice through daily challenges like a razor.", mm: "ဦးနှောက်တိမ်ဖုံးနေခြင်းသည် အသက် ၃၀ ကျော်အရွယ်တွင် ရှိမနေသင့်ပါ။ ဤသံသရာကိုဖြတ်တောက်ပြီး သင့်ဒိုပါမင်းကို ကာကွယ်ပါ။ သင့်စိတ်က နေ့စဉ်စိန်ခေါ်မှုများကို ထက်မြက်စွာ ဖြတ်ကျော်ပါလိမ့်မည်။" },
-    author: "Mental Coach"
-  },
-  {
-    text: { en: "Your late 30s are your prime building years. Every urge you master sharpens your willpower and fortifies your physical stamina. Dominate your impulses.", mm: "အသက် ၃၀ ကျော်အပိုင်းအခြားသည် ဆက်လက်တည်ဆောက်ရမည့် အကောင်းဆုံးအချိန်ဖြစ်သည်။ သင်အောင်နိုင်ခဲ့သော စေ့ဆော်မှုတိုင်းသည် သင့်စိတ်ဓာတ်ကို ပိုမိုခိုင်မာစေသည်။ စိတ်ကို အပြည့်အဝ စိုးမိုးနိုင်ပါစေ။" },
-    author: "Willpower Coach"
+    text: { en: "The discomfort of ignoring your lust today is the exact price you pay for the unbreakable focus, pristine health, and iron will you will enjoy tomorrow.", mm: "ယနေ့ သင့်ကာမစိတ်ကို လျစ်လျူရှုလိုက်ရခြင်း၏ မသက်သာမှုသည်၊ မနက်ဖြန်တွင် သင်ရရှိခံစားရမည့် ကျိုးပဲ့မသွားနိုင်သော အာရုံစိုက်မှု၊ အကောင်းဆုံးသော ကျန်းမာရေးနှင့် သံမဏိစိတ်ဓာတ်တို့အတွက် ပေးဆပ်ရသည့် အတိအကျသော တန်ဖိုးပင်ဖြစ်သည်။" },
+    author: "The Price of Greatness"
   }
 ];
