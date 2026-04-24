@@ -142,3 +142,80 @@
 .nav-active {
   color: var(--color-gold);
 }
+
+/* Handwriting & Typing Animation Effect for Header */
+@keyframes handwriting-reveal {
+  0%, 15% {
+    clip-path: inset(-10px 100% -10px -10px);
+    opacity: 0.5;
+  }
+  35%, 75% {
+    clip-path: inset(-10px -10px -10px -10px);
+    opacity: 1;
+  }
+  85%, 100% {
+    clip-path: inset(-10px 100% -10px -10px);
+    opacity: 0;
+  }
+}
+
+@keyframes handwriting-glow {
+  0%, 15% {
+    text-shadow: 0 0 0px var(--accent);
+    color: var(--text);
+  }
+  35%, 75% {
+    text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
+    color: var(--accent);
+  }
+  85%, 100% {
+    text-shadow: 0 0 0px var(--accent);
+    color: var(--text);
+  }
+}
+
+@keyframes handwriting-cursor-move {
+  0%, 15% {
+    left: 0%;
+    opacity: 0;
+  }
+  16%, 34% {
+    opacity: 1;
+  }
+  35%, 75% {
+    left: 100%;
+    opacity: 1;
+  }
+  76%, 100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+.animate-handwriting-container {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  padding-right: 0.2em; /* extra space for the cursor */
+}
+
+.animate-handwriting-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: handwriting-reveal 5s cubic-bezier(0.4, 0, 0.2, 1) infinite,
+             handwriting-glow 5s ease-in-out infinite;
+  color: var(--accent);
+}
+
+.animate-handwriting-cursor {
+  position: absolute;
+  top: 5%;
+  bottom: 5%;
+  width: 2px;
+  background-color: #fff;
+  box-shadow: 0 0 8px #fff, 0 0 15px var(--accent);
+  animation: handwriting-cursor-move 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  z-index: 10;
+  border-radius: 2px;
+  transform: translateX(-2px); /* Adjustment so it fits perfectly on the tip */
+}

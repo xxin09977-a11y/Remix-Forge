@@ -52,7 +52,10 @@ export function HomeView({ data, reactiveStreak, onCheckIn, onUrgeHelp, onToggle
     <div className="flex flex-col h-full px-4 pt-4 pb-4 bg-bg text-text overflow-hidden">
       {/* Header */}
       <div className="flex justify-between items-center mb-2 mt-2 px-2 flex-shrink-0">
-        <h1 className="text-xl font-black tracking-[0.2em] text-text uppercase leading-none accent-glow">FORGE</h1>
+        <h1 className="text-xl font-black tracking-[0.2em] uppercase leading-none animate-handwriting-container">
+          <span className="animate-handwriting-text">FORGE</span>
+          <span className="animate-handwriting-cursor"></span>
+        </h1>
         <button 
           onClick={() => {
             haptics.light();
